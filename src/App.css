@@ -1,0 +1,18 @@
+@import url('https://fonts.cdnfonts.com/css/w95fa');
+
+img,
+svg {
+  cursor: pointer !important;
+}
+
+* {
+  font-family: 'W95FA', 'MS Sans Serif', sans-serif !important;
+}
+
+fieldset {
+  font-size: 16px;
+}
+
+body {
+  overflow: hidden;
+}

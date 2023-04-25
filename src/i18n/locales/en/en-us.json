@@ -1,0 +1,124 @@
+{
+  "translation": {
+    "actions": {
+      "ok": "Ok",
+      "cancel": "Cancel",
+      "source": "Source Code",
+      "front": "Front-end",
+      "back": "Back-end",
+      "play": "Play on itch.io",
+      "about": "About"
+    },
+    "menu": {
+      "file": "File",
+      "exit": "Exit"
+    },
+    "socials": {
+      "email": "Email Me"
+    },
+    "icons": {
+      "bin": "Hopes & Dreams"
+    },
+    "taskbar": {
+      "start": "Start",
+      "socials": "Socials",
+      "projects": "Projects",
+      "games": "Games",
+      "cv": "CV",
+      "about": "About",
+      "settings": "Settings"
+    },
+    "contextMenu": {
+      "projects": "Projects",
+      "games": "Games",
+      "cv": "CV",
+      "about": "About",
+      "properties": "Properties"
+    },
+    "aboutModal": {
+      "title": "Notepad.exe - About_Me.txt",
+      "greeting": "Hello There, I'm Dan!👋",
+      "about1": "I'm a front-end wizard based in Brazil. I've always been passionate about technology and creating beautiful user experiences. I specialize in React, Vue, and Typescript and have experience working with Git Flow, unit testing, object-oriented programming, and agile methodologies to build seamless and intuitive web applications.",
+      "about2": "When I'm not changing the world one pixel at a time, you can find me working on my latest indie game project or strumming away on my guitar. Currently, I'm working as a Senior Front-end Developer at CI&T, where I'm constantly pushing myself to learn and grow as a developer. I'm excited about what the future holds, and I can't wait to see where my career takes me next!"
+    },
+    "cvModal": {
+      "title": "Curriculum Vitae",
+      "path": "/CV_EN.pdf"
+    },
+    "gamesModal": {
+      "title": "c:\\Games",
+      "games": {
+        "cavescape": {
+          "title": "CaveScape",
+          "icon": "./CaveScape.png",
+          "description": "CaveScape is a 2-bit platformer \"metroidvania\" made for the Community Game Jam 2019! Following the theme \"The game is a liar\". This exploration platformer lies about the items and powerups you get.",
+          "src": "https://itch.io/embed-upload/1803226?color=000000",
+          "srcLink": "https://github.com/danielnaoexiste/CaveScape",
+          "playLink": "https://bitsdev.itch.io/cavescape"
+        },
+        "awaken": {
+          "title": "Awaken the Dev-U",
+          "icon": "./Awaken.png",
+          "description": "Mobile choose-your-adventure game made for \"Integra Unifei 2020\"",
+          "srcLink": "https://github.com/danielnaoexiste/Awaken-the-Dev-U"
+        },
+        "torrato": {
+          "title": "Torrato",
+          "icon": "./Torrato.png",
+          "description": "Torrato is a game about a mouse trapped inside an oven, made in 48 hours for the Dev-U Jam Final Showdown!",
+          "src": "https://itch.io/embed-upload/1803291?color=48433a",
+          "srcLink": "https://github.com/danielnaoexiste/Torrato",
+          "playLink": "https://bitsdev.itch.io/torrato"
+        },
+        "spacial": {
+          "title": "Spacial Dog",
+          "icon": "./SpacialDog.png",
+          "description": "Prototype Made for Ludum Dare 42. Run out of space, avoiding asteroids and a solar explosion while collecting fuel.",
+          "srcLink": "https://bitsdev.itch.io/spacial-dog",
+          "playLink": "https://bitsdev.itch.io/spacial-dog"
+        }
+      }
+    },
+    "projectsModal": {
+      "title": "c:\\Projects",
+      "projects": {
+        "froggy": {
+          "title": "Froggy",
+          "icon": "./Froggy.png",
+          "description": "Froggy is a customizable general purpose bot for moderators and anime fans.",
+          "preview": "./preview-froggy.png",
+          "src": "https://github.com/danielnaoexiste/froggy-bot",
+          "front": "https://github.com/danielnaoexiste/froggy-web-ts",
+          "back": "https://github.com/danielnaoexiste/froggy-api"
+        },
+        "surigu": {
+          "title": "Surigu UI",
+          "icon": "./Surigu.png",
+          "description": "React Component Library built on top of styled-system.",
+          "preview": "./preview-surigu.png",
+          "src": "https://github.com/danielnaoexiste/surigu-ui"
+        },
+        "yeop": {
+          "title": "Yeop Engine",
+          "description": "C++/SDL2 Game Engine.",
+          "src": "https://github.com/danielnaoexiste/yeop-engine"
+        },
+        "beeper": {
+          "title": "Beeper",
+          "icon": "./Beeper.png",
+          "description": "React-Native + MongoDB cloud note-taking app.",
+          "preview": "./preview-beeper.jpg",
+          "previewDir": "vertical",
+          "front": "https://github.com/danielnaoexiste/beeper-client",
+          "back": "https://github.com/danielnaoexiste/beeper-server"
+        }
+      }
+    },
+    "settingsModal": {
+      "title": "System Properties",
+      "display": "Color & Appearance",
+      "scheme": "Scheme:",
+      "language": "Language:"
+    }
+  }
+}

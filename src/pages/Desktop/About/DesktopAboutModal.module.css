@@ -1,0 +1,25 @@
+a span {
+  cursor: pointer !important;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #440381;
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.grid > img {
+  height: 24px;
+  border-radius: 0.375rem;
+  margin-right: 10px;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}

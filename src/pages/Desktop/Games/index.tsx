@@ -1,0 +1,1 @@
+export { DesktopGamesModal } from './DesktopGamesModal';

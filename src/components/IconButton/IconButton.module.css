@@ -1,0 +1,21 @@
+.iconBtn {
+  display: flex;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 0px;
+  width: 64px;
+}
+
+.iconText {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}

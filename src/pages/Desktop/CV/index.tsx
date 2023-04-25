@@ -1,0 +1,1 @@
+export { DesktopCvModal } from './DesktopCvModal';

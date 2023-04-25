@@ -1,0 +1,1 @@
+export { DesktopAboutModal } from './DesktopAboutModal';
