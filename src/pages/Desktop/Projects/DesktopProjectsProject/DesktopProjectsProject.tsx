@@ -61,7 +61,7 @@ export const DesktopProjectsProject: React.FC<ProjectProps> = ({
   return (
     <Modal
       width={preview ? (previewDir === 'vertical' ? '540' : '680') : '320'}
-      height={preview ? (previewDir === 'vertical' ? '840' : '680') : '150'}
+      height={preview ? (previewDir === 'vertical' ? '840' : '680') : '170'}
       title={`${title}.exe`}
       icon={
         icon ? (

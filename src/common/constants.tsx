@@ -15,7 +15,7 @@ export interface ISocials {
 export const socials = [
   {
     name: t('socials.email') ?? 'Email',
-    url: 'mailto:contato@danielnaoexiste.dev',
+    url: 'mailto:contato@dangazzaneo.dev',
     icon: (
       <span style={{ marginRight: '2px' }}>
         <Mail variant="16x16_4" />
@@ -24,7 +24,7 @@ export const socials = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/danielnaoexiste',
+    url: 'https://www.linkedin.com/in/dangazzaneo/',
     icon: (
       <span style={{ marginRight: '10px' }}>
         <FaLinkedinIn fill="#000e7a" size={16} />

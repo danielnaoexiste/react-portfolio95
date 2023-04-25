@@ -98,6 +98,12 @@
           "preview": "./preview-surigu.png",
           "src": "https://github.com/danielnaoexiste/surigu-ui"
         },
+        "portfolio": {
+          "title": "Portfolio95",
+          "icon": "./favicon.ico",
+          "description": "Windows 95 themed portfolio built with React.",
+          "src": "https://github.com/danielnaoexiste/react-portfolio95"
+        },
         "yeop": {
           "title": "Yeop Engine",
           "description": "C++/SDL2 Game Engine.",

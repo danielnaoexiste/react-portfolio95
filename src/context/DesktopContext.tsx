@@ -31,6 +31,7 @@ export const DesktopProvider: FC<Props> = ({ children }) => {
   const [projects, setProjects] = useState({
     froggy: false,
     surigu: false,
+    portfolio: false,
     yeop: false,
     beeper: false,
   });

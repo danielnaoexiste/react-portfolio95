@@ -1,19 +1,19 @@
-import { useContext } from "react";
-import { useTranslation } from "react-i18next";
+import { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Joy102 } from "@react95/icons";
-import { Frame, Modal } from "@react95/core";
+import { Joy102 } from '@react95/icons';
+import { Frame, Modal } from '@react95/core';
 
-import { menu } from "../../../common/constants";
-import { IconButton } from "../../../components/IconButton";
-import { DesktopContext } from "../../../context/DesktopContext";
-import type { DesktopContextType } from "../../../interfaces/desktop";
+import { menu } from '../../../common/constants';
+import { IconButton } from '../../../components/IconButton';
+import { DesktopContext } from '../../../context/DesktopContext';
+import type { DesktopContextType } from '../../../interfaces/desktop';
 
-import styles from "./DesktopGamesModal.module.css";
+import styles from './DesktopGamesModal.module.css';
 
 export const DesktopGamesModal = () => {
   const { setShowGames, setGames } = useContext(
-    DesktopContext
+    DesktopContext,
   ) as DesktopContextType;
 
   const { grid } = styles;
@@ -23,7 +23,7 @@ export const DesktopGamesModal = () => {
     <Modal
       width="250"
       height="260"
-      title={t("gamesModal.title")}
+      title={t('gamesModal.title')}
       icon={<Joy102 variant="32x32_4" />}
       closeModal={() => setShowGames(false)}
       menu={menu(() => setShowGames(false))}
@@ -33,12 +33,12 @@ export const DesktopGamesModal = () => {
           <IconButton
             icon={
               <img
-                src={t("gamesModal.games.cavescape.icon") ?? ""}
+                src={t('gamesModal.games.cavescape.icon') ?? ''}
                 width={32}
-                style={{ borderRadius: "50%", border: "1px solid black" }}
+                style={{ borderRadius: '50%', border: '1px solid black' }}
               />
             }
-            text={t("gamesModal.games.cavescape.title") ?? ""}
+            text={t('gamesModal.games.cavescape.title') ?? ''}
             onClick={() =>
               setGames((games: any) => ({ ...games, cavescape: true }))
             }
@@ -46,12 +46,12 @@ export const DesktopGamesModal = () => {
           <IconButton
             icon={
               <img
-                src={t("gamesModal.games.awaken.icon") ?? ""}
+                src={t('gamesModal.games.awaken.icon') ?? ''}
                 width={32}
-                style={{ borderRadius: "50%" }}
+                style={{ borderRadius: '50%' }}
               />
             }
-            text={t("gamesModal.games.awaken.title") ?? ""}
+            text={t('gamesModal.games.awaken.title') ?? ''}
             onClick={() =>
               setGames((games: any) => ({ ...games, awaken: true }))
             }
@@ -60,12 +60,12 @@ export const DesktopGamesModal = () => {
           <IconButton
             icon={
               <img
-                src={t("gamesModal.games.torrato.icon") ?? ""}
+                src={t('gamesModal.games.torrato.icon') ?? ''}
                 width={32}
-                style={{ borderRadius: "50%" }}
+                style={{ borderRadius: '50%' }}
               />
             }
-            text={t("gamesModal.games.torrato.title") ?? ""}
+            text={t('gamesModal.games.torrato.title') ?? ''}
             onClick={() =>
               setGames((games: any) => ({ ...games, torrato: true }))
             }
@@ -73,12 +73,12 @@ export const DesktopGamesModal = () => {
           <IconButton
             icon={
               <img
-                src={t("gamesModal.games.spacial.icon") ?? ""}
+                src={t('gamesModal.games.spacial.icon') ?? ''}
                 width={32}
-                style={{ borderRadius: "50%" }}
+                style={{ borderRadius: '50%' }}
               />
             }
-            text={t("gamesModal.games.spacial.title") ?? ""}
+            text={t('gamesModal.games.spacial.title') ?? ''}
             onClick={() =>
               setGames((games: any) => ({ ...games, spacial: true }))
             }

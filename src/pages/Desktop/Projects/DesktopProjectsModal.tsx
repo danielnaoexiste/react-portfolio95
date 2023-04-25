@@ -57,6 +57,19 @@ export const DesktopProjectsModal = () => {
             }
           />
           <IconButton
+            icon={
+              <img
+                src={t('projectsModal.projects.portfolio.icon') ?? ''}
+                width={32}
+                style={{ borderRadius: '50%' }}
+              />
+            }
+            text={t('projectsModal.projects.portfolio.title') ?? ''}
+            onClick={() =>
+              setProjects((projects: any) => ({ ...projects, portfolio: true }))
+            }
+          />
+          <IconButton
             icon={<Computer3 />}
             text={t('projectsModal.projects.yeop.title') ?? ''}
             onClick={() =>
