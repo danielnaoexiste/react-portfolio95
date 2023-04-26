@@ -1,13 +1,13 @@
-import { useContext, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useContext, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
-import { Fieldset, Modal } from '@react95/core';
+import { Fieldset, Modal } from "@react95/core";
 
-import { DesktopContext } from '../../../../context/DesktopContext';
-import type { DesktopContextType } from '../../../../interfaces/desktop';
+import { DesktopContext } from "../../../../context/DesktopContext";
+import type { DesktopContextType } from "../../../../interfaces/desktop";
 
-import { menu } from '../../../../common/constants';
-import { Computer3 } from '@react95/icons';
+import { menu } from "../../../../common/constants";
+import { Computer3 } from "@react95/icons";
 
 type ProjectProps = {
   translationKey: string;
@@ -41,18 +41,18 @@ export const DesktopProjectsProject: React.FC<ProjectProps> = ({
     const btns = [];
     if (src)
       btns.push({
-        value: t('actions.source'),
-        onClick: () => window.open(src, '_blank'),
+        value: t("actions.source"),
+        onClick: () => window.open(src, "_blank"),
       });
     if (front)
       btns.push({
-        value: t('actions.front'),
-        onClick: () => window.open(front, '_blank'),
+        value: t("actions.front"),
+        onClick: () => window.open(front, "_blank"),
       });
     if (back)
       btns.push({
-        value: t('actions.back'),
-        onClick: () => window.open(back, '_blank'),
+        value: t("actions.back"),
+        onClick: () => window.open(back, "_blank"),
       });
 
     return btns;
@@ -60,12 +60,12 @@ export const DesktopProjectsProject: React.FC<ProjectProps> = ({
 
   return (
     <Modal
-      width={preview ? (previewDir === 'vertical' ? '540' : '680') : '320'}
-      height={preview ? (previewDir === 'vertical' ? '840' : '680') : '170'}
+      width={preview ? (previewDir === "vertical" ? "540" : "680") : "320"}
+      height={preview ? (previewDir === "vertical" ? "840" : "680") : "170"}
       title={`${title}.exe`}
       icon={
         icon ? (
-          <img src={icon} width={32} style={{ borderRadius: '50%' }} />
+          <img src={icon} width={32} style={{ borderRadius: "50%" }} />
         ) : (
           <Computer3 />
         )
@@ -78,21 +78,21 @@ export const DesktopProjectsProject: React.FC<ProjectProps> = ({
       {!!preview && (
         <Fieldset
           legend={`${t(`projectsModal.projects.${translationKey}.title`)}`}
-          style={{ marginBottom: '1rem' }}
+          style={{ marginBottom: "1rem" }}
         >
           <div>
             <img
               src={preview}
-              width={previewDir === 'vertical' ? 480 : 640}
-              height={previewDir === 'vertical' ? 640 : 480}
+              width={previewDir === "vertical" ? 480 : 640}
+              height={previewDir === "vertical" ? 640 : 480}
             />
           </div>
         </Fieldset>
       )}
 
       <Fieldset
-        legend={t('actions.about') ?? ''}
-        style={{ marginBottom: '.5rem' }}
+        legend={t("actions.about") ?? ""}
+        style={{ marginBottom: ".5rem" }}
       >
         {t(`projectsModal.projects.${translationKey}.description`)}
       </Fieldset>
