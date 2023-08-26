@@ -1,1 +1,1 @@
-export { DesktopGamesGame } from './DesktopGamesGame';
+export { DesktopGamesGame } from "./DesktopGamesGame"

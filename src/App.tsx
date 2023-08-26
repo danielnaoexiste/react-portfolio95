@@ -1,17 +1,14 @@
-import { useContext } from 'react';
+import "@react95/icons/icons.css"
+import "./App.css"
 
-import '@react95/icons/icons.css';
-import { GlobalStyle, ThemeProvider } from '@react95/core';
+import { GlobalStyle, ThemeProvider } from "@react95/core"
 
-import { Page } from './components/Page';
-import { Desktop } from './pages/Desktop';
-
-import './App.css';
-import { DesktopContext } from './context/DesktopContext';
-import type { DesktopContextType } from './interfaces/desktop';
+import { Page } from "./components/Page"
+import { useDesktopContext } from "./context/DesktopContext"
+import { Desktop } from "./pages/Desktop"
 
 const App = () => {
-  const { theme } = useContext(DesktopContext) as DesktopContextType;
+  const { theme } = useDesktopContext()
 
   return (
     <ThemeProvider theme={theme}>
@@ -21,7 +18,7 @@ const App = () => {
         <Desktop />
       </Page>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App

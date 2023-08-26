@@ -1,1 +1,1 @@
-export { DesktopProjectsModal } from './DesktopProjectsModal';
+export { DesktopProjectsModal } from "./DesktopProjectsModal"

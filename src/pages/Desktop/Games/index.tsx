@@ -1,1 +1,1 @@
-export { DesktopGamesModal } from './DesktopGamesModal';
+export { DesktopGamesModal } from "./DesktopGamesModal"

@@ -1,12 +1,12 @@
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import "./i18n"
 
-import { DesktopProvider } from './context/DesktopContext';
+import ReactDOM from "react-dom/client"
 
-import './i18n';
+import App from "./App"
+import { DesktopProvider } from "./context/DesktopContext"
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <DesktopProvider>
     <App />
   </DesktopProvider>,
-);
+)

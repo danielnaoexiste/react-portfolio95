@@ -1,1 +1,1 @@
-export { DesktopCvModal } from './DesktopCvModal';
+export { DesktopCvModal } from "./DesktopCvModal"

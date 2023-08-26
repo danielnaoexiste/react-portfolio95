@@ -17,7 +17,12 @@
       "email": "Email"
     },
     "icons": {
-      "bin": "Sonhos & Esperanças"
+      "bin": "Sonhos & Esperanças",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "games": "Jogos",
+      "cv": "Currículo",
+      "settings": "Configurações"
     },
     "taskbar": {
       "start": "Início",
@@ -96,7 +101,8 @@
           "icon": "./Surigu.png",
           "description": "Biblioteca de Componentes React construido a partir do styled-system.",
           "preview": "./preview-surigu.png",
-          "src": "https://github.com/danielnaoexiste/surigu-ui"
+          "src": "https://github.com/danielnaoexiste/surigu-ui",
+          "front": "https://surigu.dangazzaneo.dev/"
         },
         "portfolio": {
           "title": "Portfolio95",

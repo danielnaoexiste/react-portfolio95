@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/w95fa');
+@import url("https://fonts.cdnfonts.com/css/w95fa");
 
 img,
 svg {
@@ -6,7 +6,7 @@ svg {
 }
 
 * {
-  font-family: 'W95FA', 'MS Sans Serif', sans-serif !important;
+  font-family: "W95FA", "MS Sans Serif", sans-serif !important;
 }
 
 fieldset {

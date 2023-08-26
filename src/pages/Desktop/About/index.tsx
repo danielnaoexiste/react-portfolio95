@@ -1,1 +1,1 @@
-export { DesktopAboutModal } from './DesktopAboutModal';
+export { DesktopAboutModal } from "./DesktopAboutModal"

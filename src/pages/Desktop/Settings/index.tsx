@@ -1,1 +1,1 @@
-export { DesktopSettingsModal } from './DesktopSettingsModal';
+export { DesktopSettingsModal } from "./DesktopSettingsModal"

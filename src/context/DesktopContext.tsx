@@ -1,24 +1,23 @@
-import type { FC, ReactNode } from 'react';
-import { useState } from 'react';
-import { createContext } from 'react';
-import type { DesktopContextType } from '../interfaces/desktop';
+import type themes from "@react95/core/@types/ThemeProvider/themes"
+import type { FC, ReactNode } from "react"
+import { createContext, useContext, useState } from "react"
 
-import type themes from '@react95/core/@types/ThemeProvider/themes';
+import type { DesktopContextType } from "../interfaces/desktop"
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
-export const DesktopContext = createContext<DesktopContextType | null>(null);
+export const DesktopContext = createContext<DesktopContextType | null>(null)
 
 export const DesktopProvider: FC<Props> = ({ children }) => {
-  const [showCv, setShowCv] = useState(false);
-  const [showAbout, setShowAbout] = useState(true);
-  const [showGames, setShowGames] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
-  const [showSettings, setShowSettings] = useState(true);
+  const [showCv, setShowCv] = useState(false)
+  const [showAbout, setShowAbout] = useState(true)
+  const [showGames, setShowGames] = useState(false)
+  const [showProjects, setShowProjects] = useState(false)
+  const [showSettings, setShowSettings] = useState(true)
 
-  const [theme, setTheme] = useState<keyof typeof themes>('win95');
+  const [theme, setTheme] = useState<keyof typeof themes>("win95")
 
   const [games, setGames] = useState({
     cavescape: false,
@@ -26,7 +25,7 @@ export const DesktopProvider: FC<Props> = ({ children }) => {
     awaken: false,
     spacial: false,
     miner: false,
-  });
+  })
 
   const [projects, setProjects] = useState({
     froggy: false,
@@ -34,7 +33,7 @@ export const DesktopProvider: FC<Props> = ({ children }) => {
     portfolio: false,
     yeop: false,
     beeper: false,
-  });
+  })
 
   return (
     <DesktopContext.Provider
@@ -59,5 +58,14 @@ export const DesktopProvider: FC<Props> = ({ children }) => {
     >
       {children}
     </DesktopContext.Provider>
-  );
-};
+  )
+}
+
+export const useDesktopContext = () => {
+  const context = useContext(DesktopContext)
+
+  if (!context)
+    throw new Error("useDesktopContext must be used within a DesktopContextProvider")
+
+  return context
+}

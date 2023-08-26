@@ -1,30 +1,25 @@
-import type { FC, ReactNode } from 'react';
-import { Box } from '../Box';
+import type { FC, ReactNode } from "react"
 
-import { PageIcons } from './PageIcons';
-
-import styles from './Page.module.css';
-import { ContextMenu, ContextMenuContainer } from '../ContextMenu';
+import { Box } from "../Box"
+import { ContextMenu, ContextMenuContainer } from "../ContextMenu"
+import { StyledBackground } from "./Page.styles"
+import { PageIcons } from "./PageIcons"
 
 interface PageProps {
-  children: ReactNode;
-  description?: string;
-  title?: string;
+  children: ReactNode
+  description?: string
+  title?: string
 }
 
 export const Page: FC<PageProps> = ({ children }) => {
-  const { background } = styles;
-
   return (
-    <>
-      <div className={background}>
-        <Box as="main">
-          {children}
+    <StyledBackground>
+      <Box as="main">
+        {children}
 
-          <PageIcons />
-          <ContextMenuContainer menu={<ContextMenu />} />
-        </Box>
-      </div>
-    </>
-  );
-};
+        <PageIcons />
+        <ContextMenuContainer menu={<ContextMenu />} />
+      </Box>
+    </StyledBackground>
+  )
+}

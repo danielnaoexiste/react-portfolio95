@@ -1,23 +1,22 @@
-import { Tooltip } from '@react95/core';
-import styles from './IconButton.module.css';
+import { Tooltip } from "@react95/core"
+
+import { StyledIconButton, StyledIconText } from "./IconButton.styles"
 
 interface IconButtonProps {
-  text?: string | undefined;
+  text?: string | undefined
   icon?:
     | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | undefined;
-  onClick: () => void;
+    | undefined
+  onClick: () => void
 }
 
 export const IconButton = ({ text, icon, onClick }: IconButtonProps) => {
-  const { iconBtn, iconText } = styles;
-
   return (
     <Tooltip text={text}>
-      <div className={iconBtn} onClick={() => onClick()}>
+      <StyledIconButton onClick={() => onClick()}>
         {icon}
-        <span className={iconText}>{text}</span>
-      </div>
+        <StyledIconText>{text}</StyledIconText>
+      </StyledIconButton>
     </Tooltip>
-  );
-};
+  )
+}

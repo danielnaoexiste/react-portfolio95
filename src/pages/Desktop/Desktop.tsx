@@ -1,17 +1,15 @@
-import { useContext, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useMemo } from "react"
+import { useTranslation } from "react-i18next"
 
-import { Taskbar } from '../../components/Taskbar';
-import { DesktopContext } from '../../context/DesktopContext';
-import type { DesktopContextType } from '../../interfaces/desktop';
-
-import { DesktopAboutModal } from './About';
-import { DesktopCvModal } from './CV';
-import { DesktopGamesModal } from './Games';
-import { DesktopGamesGame } from './Games/DesktopGamesGame';
-import { DesktopProjectsModal } from './Projects';
-import { DesktopSettingsModal } from './Settings';
-import { DesktopProjectsProject } from './Projects/DesktopProjectsProject';
+import { Taskbar } from "../../components/Taskbar"
+import { useDesktopContext } from "../../context/DesktopContext"
+import { DesktopAboutModal } from "./About"
+import { DesktopCvModal } from "./CV"
+import { DesktopGamesModal } from "./Games"
+import { DesktopGamesGame } from "./Games/DesktopGamesGame"
+import { DesktopProjectsModal } from "./Projects"
+import { DesktopProjectsProject } from "./Projects/DesktopProjectsProject"
+import { DesktopSettingsModal } from "./Settings"
 
 export const Desktop = () => {
   const {
@@ -22,19 +20,16 @@ export const Desktop = () => {
     showSettings,
     games,
     projects,
-  } = useContext(DesktopContext) as DesktopContextType;
+  } = useDesktopContext()
 
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
-  const gameKeys = useMemo(
-    () => t('gamesModal.games', { returnObjects: true }),
-    [t],
-  );
+  const gameKeys = useMemo(() => t("gamesModal.games", { returnObjects: true }), [t])
 
   const projectKeys = useMemo(
-    () => t('projectsModal.projects', { returnObjects: true }),
+    () => t("projectsModal.projects", { returnObjects: true }),
     [t],
-  );
+  )
 
   return (
     <>
@@ -58,7 +53,7 @@ export const Desktop = () => {
               playLink={value.playLink}
             />
           )
-        );
+        )
       })}
 
       {Object.entries(projectKeys).map(([key, value]) => {
@@ -76,10 +71,10 @@ export const Desktop = () => {
               back={value.back}
             />
           )
-        );
+        )
       })}
 
       <Taskbar />
     </>
-  );
-};
+  )
+}

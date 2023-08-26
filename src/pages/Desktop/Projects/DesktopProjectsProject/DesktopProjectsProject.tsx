@@ -1,24 +1,21 @@
-import { useContext, useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { Fieldset, Modal } from "@react95/core"
+import { Computer3 } from "@react95/icons"
+import { useMemo } from "react"
+import { useTranslation } from "react-i18next"
 
-import { Fieldset, Modal } from "@react95/core";
-
-import { DesktopContext } from "../../../../context/DesktopContext";
-import type { DesktopContextType } from "../../../../interfaces/desktop";
-
-import { menu } from "../../../../common/constants";
-import { Computer3 } from "@react95/icons";
+import { menu } from "../../../../common/constants"
+import { useDesktopContext } from "../../../../context/DesktopContext"
 
 type ProjectProps = {
-  translationKey: string;
-  title: string;
-  icon: string;
-  preview?: string;
-  previewDir?: string;
-  src?: string;
-  front?: string;
-  back?: string;
-};
+  translationKey: string
+  title: string
+  icon: string
+  preview?: string
+  previewDir?: string
+  src?: string
+  front?: string
+  back?: string
+}
 
 export const DesktopProjectsProject: React.FC<ProjectProps> = ({
   translationKey,
@@ -30,33 +27,33 @@ export const DesktopProjectsProject: React.FC<ProjectProps> = ({
   front,
   back,
 }) => {
-  const { setProjects } = useContext(DesktopContext) as DesktopContextType;
-  const { t } = useTranslation();
+  const { setProjects } = useDesktopContext()
+  const { t } = useTranslation()
 
   const handleClose = () => {
-    setProjects((projects: any) => ({ ...projects, [translationKey]: false }));
-  };
+    setProjects((projects: any) => ({ ...projects, [translationKey]: false }))
+  }
 
   const modalButtons = useMemo(() => {
-    const btns = [];
+    const btns = []
     if (src)
       btns.push({
         value: t("actions.source"),
         onClick: () => window.open(src, "_blank"),
-      });
+      })
     if (front)
       btns.push({
         value: t("actions.front"),
         onClick: () => window.open(front, "_blank"),
-      });
+      })
     if (back)
       btns.push({
         value: t("actions.back"),
         onClick: () => window.open(back, "_blank"),
-      });
+      })
 
-    return btns;
-  }, [src, front, back, t]);
+    return btns
+  }, [src, front, back, t])
 
   return (
     <Modal
@@ -73,7 +70,7 @@ export const DesktopProjectsProject: React.FC<ProjectProps> = ({
       closeModal={handleClose}
       menu={menu(handleClose)}
       buttons={modalButtons}
-      defaultPosition={{ x: 260, y: 0 }}
+      defaultPosition={{ x: 520, y: 0 }}
     >
       {!!preview && (
         <Fieldset
@@ -90,12 +87,9 @@ export const DesktopProjectsProject: React.FC<ProjectProps> = ({
         </Fieldset>
       )}
 
-      <Fieldset
-        legend={t("actions.about") ?? ""}
-        style={{ marginBottom: ".5rem" }}
-      >
+      <Fieldset legend={t("actions.about") ?? ""} style={{ marginBottom: ".5rem" }}>
         {t(`projectsModal.projects.${translationKey}.description`)}
       </Fieldset>
     </Modal>
-  );
-};
+  )
+}
